@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using UiPath.CodedWorkflows;
+using UiPath.Core.Activities;
 
 namespace CodedAndLowCodeWorkflow
 {
@@ -13,14 +14,14 @@ namespace CodedAndLowCodeWorkflow
 
             // 2. Get Assets from Orch.
             Log("Reading UserName & Password from UiPath Orch Assets...");
-            var credentials = system.GetCredential("ACME_Credential");
+            var credential = system.GetCredential("ACME_Credential", null, out var password, CacheStrategyEnum.None, 30000);
 
             // 3. Type Into UserName
-            ACMESite.TypeInto("Email", "prasadsatish@outlook.com");
+            ACMESite.TypeInto("Email", credential);
 
             // 4. Type Into password
-            ACMESite.TypeInto("Password", credentials);
-            Log("Password from UiPath Orch Assets: " + credentials);
+            var actualPassword = new System.Net.NetworkCredential(string.Empty, password).Password;
+            ACMESite.TypeInto("Password", actualPassword);
 
             // 5. Click the Submit button to perform the Login
             ACMESite.Click("Login");
