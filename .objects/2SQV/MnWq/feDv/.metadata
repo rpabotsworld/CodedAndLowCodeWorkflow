@@ -1,0 +1,15 @@
+﻿{
+  "Id": "feDvdRv-2kaUgyG0A8-poQ",
+  "Reference": "rvQwhwDNDUeKORraldszCg/feDvdRv-2kaUgyG0A8-poQ",
+  "ParentRef": "rvQwhwDNDUeKORraldszCg/MnWqZbTAlUOL6u722Qd_VA",
+  "Name": "LogIn",
+  "Type": "Screen",
+  "Created": "2023-06-30T08:46:27.1796643Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-06-30T08:54:27.9689663Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
